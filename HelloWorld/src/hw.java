@@ -1,4 +1,4 @@
-// sample program
+// sample program stored in GitHub
 public class hw {
 	
 	// This source is stored on GitHub
