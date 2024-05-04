@@ -1,5 +1,5 @@
 
-public class Student {
+public class StudentModel {
 	   private String rollNo;
 	   private String name;
 	   

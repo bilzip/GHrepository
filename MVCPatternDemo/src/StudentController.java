@@ -1,9 +1,9 @@
 
 public class StudentController {
-	   private Student model;
+	   private StudentModel model;
 	   private StudentView view;
 
-	   public StudentController(Student model, StudentView view) {
+	   public StudentController(StudentModel model, StudentView view) {
 	      this.model = model;
 	      this.view = view;
 	   }

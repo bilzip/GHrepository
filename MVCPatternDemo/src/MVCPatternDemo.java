@@ -2,27 +2,23 @@
 public class MVCPatternDemo {
 
 	public static void main(String[] args) {
-	      //fetch student record based on his roll no from the database
-	      Student model = retrieveStudentFromDatabase();
+	      //create a model
+	      StudentModel model = new StudentModel();
 
-	      //Create a view : to write student details on console
+	      //create a view that shows the model
 	      StudentView view = new StudentView();
 
-	      StudentController controller = new StudentController(model, view);
+		  //create a controller for this MVC
+		  StudentController controller = new StudentController(model, view);
 
+		  //load the model and display the record
+		  controller.setStudentName("Robert");
+	      controller.setStudentRollNo("10");
 	      controller.updateView();
 
-	      //update model data
+	      //update the model and display the record
 	      controller.setStudentName("John");
 	      controller.setStudentRollNo("9");
-
 	      controller.updateView();
 	   }
-
-	   private static Student retrieveStudentFromDatabase() {
-	      Student student = new Student();
-	      student.setName("Robert");
-	      student.setRollNo("10");
-	      return student;
-	}
 }
